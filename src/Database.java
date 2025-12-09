@@ -5,13 +5,13 @@ import java.sql.Statement;
 
 public class Database {
 
-    private static final String URL = "jdbc:sqlite:database.db"; // ili database.db ako si tako nazvao
+    private static final String URL = "jdbc:sqlite:database.db";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL);
     }
 
-    // Pozoveš jednom na početku programa
+
     public static void init() {
         String sql = """
                 CREATE TABLE IF NOT EXISTS expenses (
